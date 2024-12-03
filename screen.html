@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Redirect half the users to Form A and half to Form B
+        window.onload = function() {
+            // Generate a random number between 0 and 1
+            const random = Math.random();
 
+            // Define your form URLs
+            const formA = "https://forms.gle/L4wLXxswM9VzWtAC9";
+            const formB = "https://forms.gle/yAPkvnEu53gUTgRm7";
+
+            // Redirect based on the random number
+            if (random < 0.5) {
+                window.location.href = formA;
+            } else {
+                window.location.href = formB;
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting you to the survey...</p>
+</body>
+</html>
